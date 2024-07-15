@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 50px white inset; /* Change the color to your own background color */
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background: lightcyan;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button:hover {
+  cursor: pointer;
+}

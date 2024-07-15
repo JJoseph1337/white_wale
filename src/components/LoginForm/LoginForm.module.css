@@ -1,0 +1,93 @@
+.form {
+  /* FIXME: неправильное позициионирование */
+  position: absolute;
+  left: 35%;
+  top: 14%;
+
+  background-color: white;
+
+  width: 300px;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  transform: translate(0, -200%);
+
+  transition: transform 0.5s
+    cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.form--open {
+  transform: none;
+}
+
+.form__heading {
+  font-size: 28px;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 9px 12px;
+
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.input:focus-within {
+  outline: none;
+}
+
+.container:focus-within label,
+.container:has(input:not([value=""])) label {
+  transform: translateY(-26px);
+}
+
+.label {
+  position: absolute;
+  padding: 4px;
+  top: 6px;
+  left: 10px;
+  font-size: 16px;
+
+  transition: 0.2s ease;
+
+  background-color: white;
+}
+
+.submitButton {
+  width: 150px;
+  padding: 7px;
+
+  border: none;
+
+  color: white;
+  background-color: rgb(99, 195, 99);
+
+  font-size: 20px;
+
+  transition: 0.2s ease;
+}
+
+.submitButton:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+.submitButton:disabled {
+  background-color: grey;
+}
